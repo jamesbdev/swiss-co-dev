@@ -29,3 +29,21 @@ button#addToCart .add-to-cart-text {
   display: inline-block; /* Ensure it behaves well in flex context */
   line-height: 1; /* Adjust line height if needed */
 }
+
+/* product page button styling */ 
+
+.product-btn-container {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.make-offer-btn {
+  background-color: green;
+}
+
+.make-enquiry-btn, .make-offer-btn  {
+  text-transform: uppercase;
+}
+
+
