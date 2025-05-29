@@ -1,0 +1,31 @@
+/* Custom styles for Swiss Time */
+
+/* Underline the "All Brands" link in the navigation dropdown */
+.navigation a[href="/pages/all-brands"],
+.dropdown__menulink[href="/pages/all-brands"],
+.dropdown__menulink[href="https://swisstimeco.ch/pages/all-brands"],
+.navigation__menulink[href="/pages/all-brands"],
+.navigation__menulink[href="https://swisstimeco.ch/pages/all-brands"] {
+  text-decoration: underline !important;
+}
+
+/* Mobile menu support */
+.mobile-menu a[href="/pages/all-brands"],
+.mobile-menu a[href="https://swisstimeco.ch/pages/all-brands"] {
+  text-decoration: underline !important;
+} 
+/* Ensure Add to Cart button is full width and adjust spacing/alignment */
+button#addToCart {
+  width: 100%;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically center icon and text */
+  justify-content: center; /* Horizontally center icon and text */
+  gap: 8px; /* Space between icon and text */
+  margin-bottom: 5px; /* Reduce space below the button */
+}
+
+/* Minor vertical alignment tweak for the text span if needed */
+button#addToCart .add-to-cart-text {
+  display: inline-block; /* Ensure it behaves well in flex context */
+  line-height: 1; /* Adjust line height if needed */
+}

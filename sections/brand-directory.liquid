@@ -1,0 +1,502 @@
+{% comment %}Brand Directory - Alphabetical Listing{% endcomment %}
+{%- liquid
+  assign section_padding = ''
+  if section.settings.section_padding == 'top'
+    assign section_padding = 'pb0'
+  elsif section.settings.section_padding == 'bottom'
+    assign section_padding = 'mt0'
+  elsif section.settings.section_padding == 'none'
+    assign section_padding = 'mt0 pb0'
+  endif
+-%}
+
+<section class="brand-directory__section global__section row section-{{ section.id }} {{ section_padding }}" data-section-id="{{ section.id }}">
+  <div class="brand-directory__inner-wrapper grid__wrapper">
+    {% if section.settings.title != blank %}
+      <div class="brand-directory__heading span-12 sm-span-12 auto">
+        <h1>{{ section.settings.title | escape }}</h1>
+      </div>
+    {% endif %}
+    
+    <div class="brand-directory__content span-12 sm-span-12 auto">
+      <div class="brand-directory__alphabet-nav" id="alphabet-nav" aria-label="Alphabetical navigation">
+        <!-- Letter navigation will be populated by JS -->
+      </div>
+      
+      <div class="brand-directory__brands-container" id="brands-container">
+        <!-- Brand listings will be populated by JS -->
+        <div class="brand-directory__loading">
+          <div class="loading-spinner"></div>
+          <p>Loading brands...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .brand-directory__section {
+    padding-bottom: 60px;
+  }
+  
+  .brand-directory__heading {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 20px;
+  }
+  
+  .brand-directory__heading h1 {
+    margin-bottom: 10px;
+  }
+  
+  .brand-directory__subtitle {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+  
+  .brand-directory__alphabet-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .brand-directory__alphabet-nav.sticky {
+    padding: 10px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  .brand-directory__alphabet-nav button {
+    min-width: 36px;
+    height: 36px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+     color: #000000;
+  }
+  
+  .brand-directory__alphabet-nav button:hover,
+  .brand-directory__alphabet-nav button.active {
+    background-color: {{ section.settings.highlight_color }};
+    color: white;
+    border-color: {{ section.settings.highlight_color }};
+  }
+  
+  .brand-directory__alphabet-nav button.disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .brand-directory__letter-section {
+    margin: 40px 0;
+    scroll-margin-top: 70px;
+  }
+  
+  .brand-directory__letter-heading {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid {{ section.settings.highlight_color }};
+  }
+  
+  .brand-directory__brands-grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+    gap: 20px;
+  }
+  
+  .brand-directory__brand-item {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    height: 100%;
+  }
+  
+  .brand-directory__brand-item:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #d0d0d0;
+  }
+  
+  .brand-directory__brand-name {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .brand-directory__loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+  }
+  
+  .brand-directory__error,
+  .brand-directory__empty {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid {{ section.settings.highlight_color }};
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @media screen and (max-width: 740px) {
+    .brand-directory__brands-grid {
+      grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
+      gap: 15px;
+    }
+    
+    .brand-directory__alphabet-nav {
+      padding: 10px 0;
+    }
+    
+    .brand-directory__alphabet-nav button {
+      min-width: 30px;
+      height: 30px;
+      font-size: 14px;
+      margin: 3px;
+    }
+    
+    .brand-directory__letter-section {
+      margin: 30px 0;
+      scroll-margin-top: 60px;
+    }
+    
+    .brand-directory__letter-heading {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    
+    .brand-directory__brand-item {
+      padding: 15px;
+    }
+  }
+</style>
+
+{% if section.settings.use_static_data %}
+  <script src="{{ 'brand-directory-data.js' | asset_url }}" defer></script>
+{% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const section = document.querySelector('[data-section-id="{{ section.id }}"]');
+    if (!section) return;
+    
+    const alphabetNav = section.querySelector('#alphabet-nav');
+    const brandsContainer = section.querySelector('#brands-container');
+    
+    // Function to fetch brands data
+    async function fetchBrands() {
+      try {
+        {% if section.settings.use_static_data %}
+          // Use static data from JS file if enabled
+          return window.brandDirectoryData?.brands || [];
+        {% else %}
+          // Otherwise use API endpoint
+          const endpoint = '{{ section.settings.api_endpoint }}';
+          const response = await fetch(endpoint);
+          
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          
+          const data = await response.json();
+          return data.brands || [];
+        {% endif %}
+      } catch (error) {
+        console.error('Error fetching brands:', error);
+        
+        // Fallback to static data if API fails
+        if (window.brandDirectoryData && window.brandDirectoryData.brands) {
+          console.log('Falling back to static brand data');
+          return window.brandDirectoryData.brands;
+        }
+        
+        brandsContainer.innerHTML = '<div class="brand-directory__error">Error loading brands. Please try again later.</div>';
+        return [];
+      }
+    }
+    
+    // Function to organize brands by first letter
+    function organizeByLetter(brands) {
+      const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+      const brandsByLetter = {};
+      
+      // Initialize with all letters
+      alphabet.forEach(letter => {
+        brandsByLetter[letter] = [];
+      });
+      
+      // Group brands by first letter
+      brands.forEach(brand => {
+        const firstLetter = brand.name.charAt(0).toUpperCase();
+        if (alphabet.includes(firstLetter)) {
+          brandsByLetter[firstLetter].push(brand);
+        }
+      });
+      
+      // Sort brands within each letter
+      Object.keys(brandsByLetter).forEach(letter => {
+        brandsByLetter[letter].sort((a, b) => a.name.localeCompare(b.name));
+      });
+      
+      return brandsByLetter;
+    }
+    
+    // Function to build the alphabet navigation
+    function buildAlphabetNav(brandsByLetter) {
+      const alphabet = Object.keys(brandsByLetter).sort();
+      
+      let navHTML = '';
+      alphabet.forEach(letter => {
+        const hasBrands = brandsByLetter[letter].length > 0;
+        const buttonClass = hasBrands ? '' : 'disabled';
+        navHTML += `<button class="${buttonClass}" data-letter="${letter}" ${hasBrands ? '' : 'disabled'} aria-label="Browse brands starting with ${letter}">${letter}</button>`;
+      });
+      
+      alphabetNav.innerHTML = navHTML;
+      
+      // Add event listeners to letter buttons
+      alphabetNav.querySelectorAll('button:not(.disabled)').forEach(button => {
+        button.addEventListener('click', function() {
+          const letter = this.dataset.letter;
+          const targetSection = section.querySelector(`#letter-${letter}`);
+          
+          // Remove active class from all buttons
+          alphabetNav.querySelectorAll('button').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          // Scroll to section
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    }
+    
+    // Function to build the brands listings
+    function buildBrandsListing(brandsByLetter) {
+      let listingHTML = '';
+      const alphabet = Object.keys(brandsByLetter).sort();
+      
+      alphabet.forEach(letter => {
+        const brands = brandsByLetter[letter];
+        
+        // Only display sections with brands
+        if (brands.length > 0) {
+          listingHTML += `
+            <div id="letter-${letter}" class="brand-directory__letter-section">
+              <h2 class="brand-directory__letter-heading">${letter}</h2>
+              <div class="brand-directory__brands-grid">
+          `;
+          
+          brands.forEach(brand => {
+            const brandLink = brand.url ? `href="${brand.url}"` : '';
+            
+            listingHTML += `
+              <a ${brandLink} class="brand-directory__brand-item" aria-label="${brand.name}">
+                <div class="brand-directory__brand-name">${brand.name}</div>
+              </a>
+            `;
+          });
+          
+          listingHTML += `
+              </div>
+            </div>
+          `;
+        }
+      });
+      
+      brandsContainer.innerHTML = listingHTML || '<div class="brand-directory__empty">No brands found.</div>';
+    }
+    
+    // Initialize the brand directory
+    async function initBrandDirectory() {
+      const brands = await fetchBrands();
+      
+      if (brands.length === 0) {
+        brandsContainer.innerHTML = '<div class="brand-directory__empty">No brands found.</div>';
+        return;
+      }
+      
+      const brandsByLetter = organizeByLetter(brands);
+      buildAlphabetNav(brandsByLetter);
+      buildBrandsListing(brandsByLetter);
+      
+      // Activate first letter with brands
+      const firstAvailableLetter = Object.keys(brandsByLetter).sort().find(letter => brandsByLetter[letter].length > 0);
+      if (firstAvailableLetter) {
+        const firstLetterButton = alphabetNav.querySelector(`[data-letter="${firstAvailableLetter}"]`);
+        if (firstLetterButton) {
+          firstLetterButton.click();
+        }
+      }
+    }
+    
+    // Handle intersection observer for sticky nav
+    function handleStickyNav() {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+              alphabetNav.classList.add('sticky');
+            } else {
+              alphabetNav.classList.remove('sticky');
+            }
+          });
+        },
+        { threshold: 0 }
+      );
+      
+      observer.observe(section.querySelector('.brand-directory__heading') || section);
+    }
+    
+    // Initialize
+    initBrandDirectory();
+    handleStickyNav();
+    
+    // Handle keyboard navigation
+    document.addEventListener('keydown', function(event) {
+      // Only handle letter keys
+      if (/^[a-zA-Z]$/.test(event.key)) {
+        const letter = event.key.toUpperCase();
+        const letterButton = alphabetNav.querySelector(`button[data-letter="${letter}"]:not(.disabled)`);
+        
+        if (letterButton) {
+          letterButton.click();
+        }
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Brand Directory",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Brand Directory"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "use_static_data",
+      "label": "Use static data",
+      "info": "Use preset brand data instead of API. Enable if you don't have an API endpoint.",
+      "default": true
+    },
+    {
+      "type": "url",
+      "id": "api_endpoint",
+      "label": "API Endpoint",
+      "info": "URL to fetch brand data from"
+    },
+    {
+      "type": "color",
+      "id": "highlight_color",
+      "label": "Highlight Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "label": "Desktop Columns",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Mobile Columns",
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "section_padding",
+      "label": "Section Padding",
+      "options": [
+        {
+          "value": "both",
+          "label": "Top & Bottom"
+        },
+        {
+          "value": "top",
+          "label": "Top Only"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom Only"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "both"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand Directory",
+      "category": "Custom"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  }
+}
+{% endschema %} 

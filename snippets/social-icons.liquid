@@ -1,0 +1,164 @@
+{% comment %}
+  Social Icons
+
+  This snippet is used to display social media icons across the theme. It appears in the footer, main password, mobile navigation, newsletter and
+  announcement bar sections.
+
+  Accepts:
+    - wrapper: The class or id of the element that the icons will be appended to.
+    - fill_color: The color of the icon.
+    - hover_color: The color of the icon when hovered over.
+    - id: The id of the element.
+    - class: The class of the element.
+
+  Usage:
+    {% render 'social-icons', wrapper: '.footer__social-icons', fill_color: '#000', hover_color: '#fff', id: 'id', class: 'classes' %}
+{% endcomment %}
+<ul
+  {% if id != blank %}id="{{ id }}"{% endif %}
+  {% if class != blank %}class="{{ class }}"{% endif %}
+>
+  {% if settings.facebook_url != blank %}
+    <li>
+      <a href="{{ settings.facebook_url }}" target="_blank" aria-label="Facebook">
+        {% render 'snip-icons',
+          wrapper: wrapper,
+          type: 'social',
+          icon: 'facebook',
+          classes: 'social-icons--icon',
+          size: '14px',
+          fill: fill_color,
+          hover: hover_color
+        %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.twitter_url != blank %}
+    <li>
+      <a href="{{ settings.twitter_url }}" target="_blank" aria-label="Twitter">
+        {% render 'snip-icons',
+          wrapper: wrapper,
+          type: 'social',
+          icon: 'twitter',
+          classes: 'social-icons--icon',
+          size: '14px',
+          fill: fill_color,
+          hover: hover_color
+        %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.pinterest_url != blank %}
+    <li>
+      <a href="{{ settings.pinterest_url }}" target="_blank" aria-label="Pinterest">
+        {% render 'snip-icons',
+          wrapper: wrapper,
+          type: 'social',
+          icon: 'pinterest',
+          classes: 'share-icons--icon',
+          size: '14px',
+          fill: fill_color,
+          hover: hover_color
+        %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.tumblr_url != blank %}
+    <li>
+      <a href="{{ settings.tumblr_url }}" target="_blank" aria-label="Tumblr">
+        {% render 'snip-icons',
+          wrapper: wrapper,
+          type: 'social',
+          icon: 'tumblr',
+          classes: 'share-icons--icon',
+          size: '14px',
+          fill: fill_color,
+          hover: hover_color
+        %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.youtube_url != blank %}
+    <li>
+      <a href="{{ settings.youtube_url }}" target="_blank" aria-label="Youtube">
+        {% render 'snip-icons',
+          wrapper: wrapper,
+          type: 'social',
+          icon: 'youtube',
+          classes: 'share-icons--icon',
+          size: '14px',
+          fill: fill_color,
+          hover: hover_color
+        %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.instagram_url != blank %}
+    <li>
+      <a href="{{ settings.instagram_url }}" target="_blank" aria-label="Instagram">
+        {% render 'snip-icons',
+          wrapper: wrapper,
+          type: 'social',
+          icon: 'instagram',
+          classes: 'share-icons--icon',
+          size: '14px',
+          fill: fill_color,
+          hover: hover_color
+        %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.snapchat_url != blank %}
+    <li>
+      <a href="{{ settings.snapchat_url }}" target="_blank" aria-label="Snapchat">
+        {% render 'snip-icons',
+          wrapper: wrapper,
+          type: 'social',
+          icon: 'snapchat',
+          classes: 'share-icons--icon',
+          size: '14px',
+          fill: fill_color,
+          hover: hover_color
+        %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.tiktok_url != blank %}
+    <li>
+      <a href="{{ settings.tiktok_url }}" target="_blank" aria-label="TikTok">
+        {% render 'snip-icons',
+          wrapper: wrapper,
+          type: 'social',
+          icon: 'tiktok',
+          classes: 'share-icons--icon',
+          size: '14px',
+          fill: fill_color,
+          hover: hover_color
+        %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.etsy_url != blank %}
+    <li>
+      <a href="{{ settings.etsy_url }}" target="_blank" aria-label="Etsy">
+        {% render 'snip-icons',
+          wrapper: wrapper,
+          type: 'social',
+          icon: 'etsy',
+          classes: 'share-icons--icon',
+          size: '14px',
+          fill: fill_color,
+          hover: hover_color
+        %}
+      </a>
+    </li>
+  {% endif %}
+</ul>
