@@ -8048,4 +8048,38 @@ const fixCarouselsWithBadges = (function() {
 
   observer.observe(targetNode, config);
 
+ 
+ 
+  
+
 })();
+
+
+ //disable form buttons on product page 
+ const makeOfferBtn = document.querySelector('#makeOffer');
+ const makeEnquiryBtn = document.querySelector('#makeEnquiry');
+
+if (makeOfferBtn) {
+  makeOfferBtn.addEventListener('click', function(event) {
+    // display modal 
+    event.preventDefault();
+    console.log("clicked");
+    //open modal 
+    // create form 
+    // get form id 
+    // display the form
+  });
+}
+
+if( makeEnquiryBtn) {
+  makeEnquiryBtn.addEventListener('click', function(event) {
+    //event.preventDefault();
+    console.log("clicked");
+    // display contact us modal 
+    // get the form id 
+    // show the form 
+  })
+} 
+
+
+
