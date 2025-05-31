@@ -6068,6 +6068,7 @@ small.property--required {
 .product__section--qty {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .product__section--qty label {

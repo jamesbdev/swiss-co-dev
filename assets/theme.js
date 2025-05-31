@@ -8055,7 +8055,8 @@ const fixCarouselsWithBadges = (function() {
 })();
 
 
- //disable form buttons on product page 
+
+//disable form buttons on product page 
  const makeOfferBtn = document.querySelector('#makeOffer');
  const makeEnquiryBtn = document.querySelector('#makeEnquiry');
 
@@ -8073,7 +8074,7 @@ if (makeOfferBtn) {
 
 if( makeEnquiryBtn) {
   makeEnquiryBtn.addEventListener('click', function(event) {
-    //event.preventDefault();
+    event.preventDefault();
     console.log("clicked");
     // display contact us modal 
     // get the form id 
@@ -8081,5 +8082,7 @@ if( makeEnquiryBtn) {
   })
 } 
 
+
+ 
 
 

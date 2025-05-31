@@ -46,4 +46,27 @@ button#addToCart .add-to-cart-text {
   text-transform: uppercase;
 }
 
+.template-product #contact-form {
+  display: none;
+}
+
+/* wishlist button */ 
+.wishlist-icon-container {
+  margin-left: 10px;
+}
+
+#swym-atw-pdp-button {
+  display: none;
+}
+
+.swym-button.unfilled.swym-added {
+  display: none;
+}
+
+.swym-button.filled:not(.swym-added) {
+  display: none;
+}
+
+
+
 
