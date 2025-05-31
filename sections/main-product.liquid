@@ -387,21 +387,33 @@
          
               </div>
                 <!-- wishlist icon -->
-               <span class="wishlist-icon-container">
-                <i aria-hidden="true" role="presentation" class="swym-button unfilled swym-add-to-wishlist fa-regular fa fa-heart" 
+               <span class="wishlist-icon-container unfilled">
+                <button class="swym-button swym-add-to-wishlist" 
+                   data-with-epi="true" 
+                   data-swaction="addToWishlist" 
+                   data-product-id="{{ product.id }}"
+                   data-variant-id="{{ product.variants[0].id }}"
+                   data-product-url="{{ shop.url }}{{ product.url }}">
+               <i  aria-hidden="true" role="presentation" class="fa-regular fa fa-heart" 
                    data-with-epi="true" 
                    data-swaction="addToWishlist" 
                    data-product-id="{{ product.id }}"
                    data-variant-id="{{ product.variants[0].id }}"
                    data-product-url="{{ shop.url }}{{ product.url }}">
                 </i>
-                   <i aria-hidden="true" role="presentation" class="swym-button filled swym-add-to-wishlist fa-solid fa fa-heart" 
+                </button>
+              
+                <button class="swym-button filled" 
                    data-with-epi="true" 
                    data-swaction="addToWishlist" 
                    data-product-id="{{ product.id }}"
                    data-variant-id="{{ product.variants[0].id }}"
                    data-product-url="{{ shop.url }}{{ product.url }}">
-                </i> Add to Wishlist
+                  <i aria-hidden="true" role="presentation" class=" fa-solid fa fa-heart">
+                  
+                </i> 
+                </button>
+           
                </span>
             </div>
 
