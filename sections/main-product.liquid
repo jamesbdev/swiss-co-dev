@@ -581,7 +581,7 @@
 - if not, show make offer and make enquiry buttons
 {% endcomment %}
  {%  if product.tags contains 'hide-add-to-cart' %}
-  {% if customer.tags contains 'approved' %}
+  {% if customer.tags contains 'offer-accepted' %}
       <button id="addToCart" type="submit" name="button" class="add clearfix AddtoCart js-ajax-submit {% if settings.show_payment_button and product.selling_plan_groups.size == 0 %} secondary-button{% endif %}" {% unless current_variant.available %} disabled{% endunless %}>
       {% render 'snip-icons', type: 'apollo', icon: 'cart', size: '18px', fill: '#ffffff' %}
       <span class="add-to-cart-text">{{ call_to_action }}</span>
