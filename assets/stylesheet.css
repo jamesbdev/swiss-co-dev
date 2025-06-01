@@ -10496,7 +10496,7 @@ Copyright (c) 2014 Daniel Eden
   margin-bottom: 25px;
 }
 .collection__promotion-container {
-  height: 200px;
+  height: auto;
   min-height: 200px;
   position: relative;
 }
@@ -10509,9 +10509,9 @@ Copyright (c) 2014 Daniel Eden
     padding-bottom: 200px !important;
 }
 .collection__promotion-caption {
-  position: absolute;
+  position: relative;
   top: 50%;
-  width: max-content;
+  width: 100%;
   max-width: 100%;
   padding: 10px;
 }
