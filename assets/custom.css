@@ -59,6 +59,13 @@ button#addToCart .add-to-cart-text {
   display: none;
 }
 
+.swym-button {
+  margin-bottom: 5px;
+  background: none;
+  color: black;
+}
+
+
 .swym-button.unfilled.swym-added {
   display: none;
 }
@@ -66,6 +73,9 @@ button#addToCart .add-to-cart-text {
 .swym-button.filled:not(.swym-added) {
   display: none;
 }
+
+
+
 
 
 
