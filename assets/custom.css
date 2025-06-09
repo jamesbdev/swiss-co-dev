@@ -63,6 +63,12 @@ button#addToCart .add-to-cart-text {
   margin-bottom: 5px;
   background: none;
   color: black;
+  padding: 0;
+}
+
+.swym-button:hover {
+  background: none;
+  color: black;
 }
 
 
