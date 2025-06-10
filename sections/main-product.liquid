@@ -528,9 +528,6 @@
                {% endstyle %}
             </div>
 
-            <!-- enquiry form --> 
-            {%  render 'enquiry-form' %}
-           
  
           {%- when 'product_buttons' -%}
             <div class="product__section--buttons product-add product__section--element" {{ block.shopify_attributes }}>
@@ -589,10 +586,10 @@
   {% else %}
     <!-- make offer buttons -->
     <div class="product-btn-container">
-      <button id="makeOffer" class="make-offer-btn" >
+      <button id="makeOffer" class="make-offer-btn js-modal-open" data-wau-modal-target="offer-form" >
         <span class="add-to-cart-text">Make an offer</span>
       </button>
-      <button id="makeEnquiry" class="make-enquiry-btn js-modal-open js-contact-trigger" data-wau-modal-target="popup-content--enquiry-form">
+      <button id="makeEnquiry" class="make-enquiry-btn js-modal-open js-contact-trigger" data-wau-modal-target="enquiry-form">
         {% render 'snip-icons', type: 'apollo', icon: 'envelope', size: '18px', fill: '#ffffff' %}
         <span class="add-to-cart-text">Make an enquiry</span>
       </button>
@@ -612,7 +609,14 @@
   {%-  endform -%}
   </div>
 
+  <!-- add contact forms here -->
 
+
+            <!-- enquiry form --> 
+           {% render 'enquiry-form' %}
+
+           {% render 'offer-form' %}
+           
         
           {%- when 'product_description' -%}
 

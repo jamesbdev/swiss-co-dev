@@ -1,45 +1,45 @@
-<div class="offer-form-modal">
-    <div class="enquiry-form">
-{% form 'contact' %}
-<h2> Make an Offer </h2>
-  {{ form.errors | default_errors }}
-  <p>Please fill the form to make an offer on this product and one of our team members will contact you.</p>
+<div class="offer-form-modal hidden" data-wau-modal-content="offer-form">
+  <div class="enquiry-form">
+  {% form 'contact' %}
+  <h2> Make an Offer </h2>
+    {{ form.errors | default_errors }}
+    <p>Please fill the form to make an offer on <strong>{{ product.title }}</strong>, and one of our team members will contact you.</p>
 
-  <div class="first-name">
-    <label for="first-name">First name</label>
-    <input type="text" name="contact[first_name]" id="first-name" />
-  </div>
+    <div class="first-name">
+      <label for="first-name">First name</label>
+      <input type="text" name="contact[first_name]" id="first-name" />
+    </div>
 
-  <div class="last-name">
-    <label for="last-name">Last name</label>
-    <input type="text" name="contact[last_name]" id="last-name" />
-  </div>
+    <div class="last-name">
+      <label for="last-name">Last name</label>
+      <input type="text" name="contact[last_name]" id="last-name" />
+    </div>
 
-  <div class="phone">
-    <label for="phone">Phone</label>
-    <input type="tel" name="contact[phone]" id="phone" />
-  </div>
+    <div class="phone">
+      <label for="phone">Phone</label>
+      <input type="tel" name="contact[phone]" id="phone" />
+    </div>
 
-  <div class="email">
-    <label for="email">Email</label>
-    <input type="email" name="contact[email]" id="email" />
-  </div>
-  <div class="offer">
-    <label for="offer">Offer</label>
-    <input type="text" name="contact[offer]" id="offer" />
+    <div class="email">
+      <label for="email">Email</label>
+      <input type="email" name="contact[email]" id="email" />
+    </div>
+    <div class="offer">
+      <label for="offer">Offer</label>
+      <input type="text" name="contact[offer]" id="offer" />
 
-  </div>
+    </div>
 
-  <div class="message">
-    <label for="message">Message</label>
-    <textarea name="contact[body]" id="message"></textarea>
-  </div>
+    <div class="message">
+      <label for="message">Message</label>
+      <textarea name="contact[body]" id="message"></textarea>
+    </div>
 
-  <div class="submit">
-    <input type="submit" value="Send message" />
-  </div>
+    <div class="submit">
+      <input type="submit" value="Send message" />
+    </div>
 
 
-{%  endform %}
+  {%  endform %}
 </div>
 </div>

@@ -1,29 +1,33 @@
-<div class="enquiry-form-modal">
-    <div class="enquiry-form">
+<div class="enquiry-form-modal hidden" data-wau-modal-content="enquiry-form">
+
+<div class="enquiry-form">
 {% form 'contact' %}
   <h2>Make an Enquiry</h2> 
   {{ form.errors | default_errors }}
   <p>Please fill this form and a member of Swiss Co will contact you.</p>
-
-  <div class="first-name">
+ <div class="enquiry-first-row">
+    <div class="first-name">
     <label for="first-name">First name</label>
     <input type="text" name="contact[first_name]" id="first-name" />
   </div>
-
   <div class="last-name">
     <label for="last-name">Last name</label>
     <input type="text" name="contact[last_name]" id="last-name" />
   </div>
 
+ </div>
+
+ <div class="enquiry-second-row">
   <div class="phone">
     <label for="phone">Phone</label>
     <input type="tel" name="contact[phone]" id="phone" />
   </div>
-
   <div class="email">
     <label for="email">Email</label>
     <input type="email" name="contact[email]" id="email" />
   </div>
+ </div>
+
 
   <div class="message">
     <label for="message">Message</label>
