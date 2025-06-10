@@ -72,9 +72,9 @@ button#addToCart .add-to-cart-text {
 }
 
 
-.swym-button.unfilled.swym-added {
+/* .swym-button.unfilled.swym-added {
   display: none;
-}
+} */
 
 .swym-button.filled:not(.swym-added) {
   display: none;
