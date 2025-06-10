@@ -4853,6 +4853,11 @@ theme.ProductForm = function (context, sectionId, events, Product) {
         console.warn('Error. Contact not posted.');
         return false;
       }
+      if (!contactTabContent) {
+      console.warn('Error. No tab content with .js-tabbed-question.');
+      return false;
+}
+
       const contactTabContentId = contactForm.closest('.js-tabbed-content.js-tabbed-question').id;
       if (!contactTabContentId) {
         console.warn('Error. No tab content with .js-tabbed-question.');
@@ -8059,13 +8064,19 @@ const fixCarouselsWithBadges = (function() {
 //disable form buttons on product page 
  const makeOfferBtn = document.querySelector('#makeOffer');
  const makeEnquiryBtn = document.querySelector('#makeEnquiry');
+ const offerModal = document.querySelector(".offer-form-modal");
+ const enquiryModal = document.querySelector(".enquiry-form-modal");
+
+
 
 if (makeOfferBtn) {
   makeOfferBtn.addEventListener('click', function(event) {
     // display modal 
     event.preventDefault();
     console.log("clicked");
+  //  offerModal.classList.toggle("hidden");
     //open modal 
+ 
     // create form 
     // get form id 
     // display the form
@@ -8077,6 +8088,7 @@ if( makeEnquiryBtn) {
     event.preventDefault();
     console.log("clicked");
     // display contact us modal 
+   // enquiryModal.classList.toggle("hidden");
     // get the form id 
     // show the form 
   })
