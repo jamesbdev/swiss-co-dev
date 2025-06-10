@@ -86,6 +86,14 @@ button#addToCart .add-to-cart-text {
   display: flex;
 }
 
+.enquiry-form h2, .enquiry-form p {
+  text-align: center;
+}
+
+.enquiry-form p {
+  margin-bottom: 20px;
+}
+
 .enquiry-form-modal .first-name input {
   width: 100%;
 }
