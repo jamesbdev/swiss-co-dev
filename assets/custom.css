@@ -39,7 +39,7 @@ button#addToCart .add-to-cart-text {
 }
 
 .make-offer-btn {
-  background-color: green;
+  background-color: #48a464;
 }
 
 .make-enquiry-btn, .make-offer-btn  {
@@ -63,7 +63,7 @@ button#addToCart .add-to-cart-text {
   margin-bottom: 5px;
   background: none;
   color: black;
-  padding: 0;
+
 }
 
 .swym-button:hover {
