@@ -94,6 +94,11 @@ button#addToCart .add-to-cart-text {
   margin-bottom: 20px;
 }
 
+.enquiry-form .phone input {
+  width: 100%;
+  height: 43px;
+}
+
 .enquiry-form-modal .first-name input {
   width: 100%;
 }
