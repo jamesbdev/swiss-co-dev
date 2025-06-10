@@ -1,9 +1,9 @@
-<div class="enquiry-form-modal">
+<div class="offer-form-modal">
     <div class="enquiry-form">
 {% form 'contact' %}
-  <h2>Make an Enquiry</h2> 
+<h2> Make an Offer </h2>
   {{ form.errors | default_errors }}
-  <p>Please fill this form and a member of Swiss Co will contact you.</p>
+  <p>Please fill the form to make an offer on this product and one of our team members will contact you.</p>
 
   <div class="first-name">
     <label for="first-name">First name</label>
@@ -23,6 +23,11 @@
   <div class="email">
     <label for="email">Email</label>
     <input type="email" name="contact[email]" id="email" />
+  </div>
+  <div class="offer">
+    <label for="offer">Offer</label>
+    <input type="text" name="contact[offer]" id="offer" />
+
   </div>
 
   <div class="message">
