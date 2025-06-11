@@ -134,6 +134,24 @@ button#addToCart .add-to-cart-text {
   }
 }
 
+/* Hide the large search bar on mobile devices */
+   .large-search {
+    display: none;
+  } 
+
+/* hide search icon on large screens */
+@media (min-width: 990px) {
+  .search-icon {
+    display: none;
+  }
+   .large-search {
+    display: block;
+  }
+}
+
+
+
+
 
 
 

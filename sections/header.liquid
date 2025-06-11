@@ -94,9 +94,9 @@
 
       {% if section.settings.header_layout == 'center' %}
         <div class="large-search">
-          {% if section.settings.search_layout == 'visible'  %}
+          {% comment %} {% if section.settings.search_layout == 'visible'  %} {% endcomment %}
             {{ search }}
-          {% endif %}
+          {% comment %} {% endif %} {% endcomment %}
         </div>
       {% endif %}
 
@@ -191,9 +191,6 @@
             {% endif %}
           {% endif %}
           <!-- Wishlist link -->
-  
-
-        
             <li class="cart-links"> 
               <a href="#swym-wishlist" class="swym-wishlist">
               <i aria-hidden="true" focusable="false" role="presentation" class="fa-solid fa fa-heart"></i>
