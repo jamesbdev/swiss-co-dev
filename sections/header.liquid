@@ -398,7 +398,9 @@
         flex: 0 0 {{ section.settings.logo_max_width_mobile }}px;
       }
       .mobile-menu__trigger.mobile-only {
-          flex: 0 0 calc((50% - {{ section.settings.logo_max_width_mobile }}px / 2) - 1em);
+          flex-grow: 0;
+          flex-shrink: 1;
+          flex-basis: calc((50% - {{ section.settings.logo_max_width_mobile }}px / 2) - 1em);
           margin: 0!important;
           float: none!important;
       }
@@ -411,6 +413,12 @@
       .navigation {
         display: none;
       }
+    }
+
+    @media screen and (max-width: 540px) {
+        .mobile-menu__trigger.mobile-only {
+          flex-basis: 40px;
+        }
     }
 
     {% if section.settings.icons_only %}

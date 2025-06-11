@@ -114,15 +114,24 @@ button#addToCart .add-to-cart-text {
     gap: 20px;
     width: 100%;
 
-}
+  }
   
 
 }
 
-
-
 .hidden {
   display: none;
+}
+
+/* mobile menu */
+@media (max-width: 450px) {
+  .cart-links__link-account, .cart-links {
+    display: none;
+  }
+
+  ul.shopping--cart_links {
+    gap: 0.2em;
+  }
 }
 
 

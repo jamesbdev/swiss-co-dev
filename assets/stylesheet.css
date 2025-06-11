@@ -2153,12 +2153,14 @@ button.search-button {
 
 ul.shopping--cart_links {
   text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.4em; 
 }
 
 ul.shopping--cart_links > li {
-  display: inline-block;
   vertical-align: middle;
-  min-width: 25px;
+  list-style-type: none;
 }
 
 ul.shopping--cart_links > li a,
@@ -6672,11 +6674,11 @@ li.product__tab-trigger > a.active {
   }
 
   @media screen and (max-width: 980px) {
-    #nav,
+     /* #nav,
     ul.shopping--cart_links li.cart-overview span.my-cart-text,
     ul.shopping--cart_links li.customer-accounts,
     ul.shopping--cart_links li.search-icon,
-    .large-search { display: none !important; }
+    .large-search { display: none !important; }  */
 
     .gridlock-fluid div#identity { padding-left: 10px !important; padding-right: 10px !important; }
     #mobile-only { display: none; }

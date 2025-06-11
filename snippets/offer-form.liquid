@@ -1,11 +1,11 @@
 <div class="offer-form-modal hidden" data-wau-modal-content="offer-form">
-  <div class="enquiry-form">
+  <div class="enquiry-form" id="contactFormWrapper">
   {% form 'contact' %}
   <h2> Make an Offer </h2>
     {{ form.errors | default_errors }}
     <p>Please fill the form to make an offer on <strong>{{ product.title }}</strong>, and one of our team members will contact you.</p>
-
-    <div class="first-name">
+    <div class="enquiry-first-row">
+   <div class="first-name">
       <label for="first-name">First name</label>
       <input type="text" name="contact[first_name]" id="first-name" />
     </div>
@@ -14,7 +14,9 @@
       <label for="last-name">Last name</label>
       <input type="text" name="contact[last_name]" id="last-name" />
     </div>
-
+    </div>
+ 
+    <div class="enquiry-second-row"> 
     <div class="phone">
       <label for="phone">Phone</label>
       <input type="tel" name="contact[phone]" id="phone" />
@@ -24,6 +26,8 @@
       <label for="email">Email</label>
       <input type="email" name="contact[email]" id="email" />
     </div>
+    </div>
+
     <div class="offer">
       <label for="offer">Offer</label>
       <input type="text" name="contact[offer]" id="offer" />

@@ -4853,10 +4853,13 @@ theme.ProductForm = function (context, sectionId, events, Product) {
         console.warn('Error. Contact not posted.');
         return false;
       }
-      if (!contactTabContent) {
-      console.warn('Error. No tab content with .js-tabbed-question.');
-      return false;
-}
+      //check for tabbed layout
+       const contactTabContent = contactForm.closest('.js-tabbed-content.js-tabbed-question');
+       if (!contactTabContent) {
+       // Not in a tabbed layout, so just return (no error)
+        return false;
+      }
+
 
       const contactTabContentId = contactForm.closest('.js-tabbed-content.js-tabbed-question').id;
       if (!contactTabContentId) {
