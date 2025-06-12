@@ -601,8 +601,7 @@
       {% render 'snip-icons', type: 'apollo', icon: 'cart', size: '18px', fill: '#ffffff' %}
       <span class="add-to-cart-text">{{ call_to_action }}</span>
     </button>
-   <!-- display license add to cart for pre-owned bags and wallets -->
-   {% render 'secondary-product-card' %}
+
     
 {% endif  %}
  
@@ -611,6 +610,9 @@
   {% endif %}
   {%-  endform -%}
   </div>
+
+  <!-- display license add to cart for pre-owned bags and wallets -->
+   {% render 'secondary-product-card' %}
 
   <!-- add contact forms here -->
   {% render 'enquiry-form' %}

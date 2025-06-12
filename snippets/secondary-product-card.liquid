@@ -23,13 +23,22 @@
          
           </div>
          
-  
-         <button type="submit" name="add" class="add clearfix AddtoCart js-ajax-submit">
+       {%  assign variant_id = license_product.first_available_variant.id %}
+         <button 
+            type="button" 
+            name="add" 
+            class="add clearfix AddtoCart js-ajax-submit secondary-add-to-cart" 
+            data-product-id="{{ variant_id }}" 
+            data-product-quantity="1">
              {% render 'snip-icons', type: 'apollo', icon: 'cart', size: '18px', fill: '#ffffff' %}
              <span class="add-to-cart-text">{{ 'products.product.add_to_cart' | t }}</span>
          </button>
         </div>
+        
     
   
       {% endif  %}
      {% endfor  %}
+    
+
+       
