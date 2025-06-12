@@ -164,6 +164,7 @@ button#addToCart .add-to-cart-text {
 .license-card img {
   width: 100px;
   height: auto;
+  flex-basis: 120px;
 }
 
 .license-card .flex-container {
