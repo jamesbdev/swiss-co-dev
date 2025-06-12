@@ -154,7 +154,7 @@ button#addToCart .add-to-cart-text {
 .license-card {
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
+  margin: 15px 0 0;
   border: none;
   padding: 20px;
   background: #f5f5f5;

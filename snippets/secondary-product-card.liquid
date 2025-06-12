@@ -1,0 +1,35 @@
+    <!-- show extra add to cart  -->
+    {% comment %}
+     - check if the product is a pre-owned bag or pre-owned wallet
+      - if it is, show the following:
+        - display product image
+        - product title 
+        - product price 
+        - add to cart button 
+      
+    {% endcomment %}
+     {% for collection in product.collections %}
+      {% if collection.handle == "pre-owned-wallets"  or collection.handle == "pre-owned-bags" %}
+        {% assign license_product = all_products['digital-authentication-certificate-test'] %}
+        <div class="license-card">
+          <div class="flex-container"> 
+          {{ license_product.featured_image | image_url: width: 400 | image_tag: width: 50, height: 50 }}
+          <div class="product-information"> 
+            <!-- product vendor -->
+            <h3 class="product-vendor">{{ license_product.vendor }}</h3>
+            <h4 class="product__section-title product-title">{{ license_product.title | capitalize }}</h4>
+            <p class="license-price"> {{ license_product.price | money_with_currency}}</p>
+         </div>
+         
+          </div>
+         
+  
+         <button type="submit" name="add" class="add clearfix AddtoCart js-ajax-submit">
+             {% render 'snip-icons', type: 'apollo', icon: 'cart', size: '18px', fill: '#ffffff' %}
+             <span class="add-to-cart-text">{{ 'products.product.add_to_cart' | t }}</span>
+         </button>
+        </div>
+    
+  
+      {% endif  %}
+     {% endfor  %}

@@ -601,37 +601,8 @@
       {% render 'snip-icons', type: 'apollo', icon: 'cart', size: '18px', fill: '#ffffff' %}
       <span class="add-to-cart-text">{{ call_to_action }}</span>
     </button>
-    <!-- show extra add to cart  -->
-    {% comment %}
-     - check if the product is a pre-owned bag or pre-owned wallet
-      - if it is, show the following:
-        - display product image
-        - product title 
-        - product price 
-        - add to cart button 
-      
-    {% endcomment %}
-     {% for collection in product.collections %}
-      {% if collection.handle == "pre-owned-wallets"  or collection.handle == "pre-owned-bags" %}
-        {% assign license_product = all_products['digital-authentication-certificate-test'] %}
-        <div class="license-card">
-          <div class="flex-container"> 
-          {{ license_product.featured_image | image_url: width: 400 | image_tag: width: 50, height: 50 }}
-          <div class="product-information"> 
-            <h3>{{ license_product.title }}</h3>
-            <p class="license-price"> {{ license_product.price | money_with_currency}}</p>
-         </div>
-         
-          </div>
-         
-         <!--product image -->
-         <!-- add to cart button -->
-         <button>Add to cart</button>
-        </div>
-    
-  
-      {% endif  %}
-     {% endfor  %}
+   <!-- display license add to cart for pre-owned bags and wallets -->
+   {% render 'secondary-product-card' %}
     
 {% endif  %}
  
