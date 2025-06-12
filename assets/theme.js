@@ -8097,6 +8097,55 @@ if( makeEnquiryBtn) {
   })
 } 
 
+//logic for the secondary add to cart button 
+ const addToCartButtons = document.querySelectorAll(".secondary-add-to-cart");
+
+  addToCartButtons.forEach(function(button) {
+
+    button.addEventListener("click", function(event) {
+     
+      const productId = button.getAttribute("data-product-id");
+      const quantity = button.getAttribute("data-quantity") || 1;
+  
+      //add product to cart
+      fetch("/cart/add.js", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          id: productId,
+          quantity: parseInt(quantity, 10)
+        })
+      }).then(response => response.json())
+      .then(data => {
+        console.log("Product added to cart:", data);
+        // Get cart config from the page
+        const cartConfigEl = document.getElementById('cart-config');
+        if (!cartConfigEl) return;
+        const config = JSON.parse(cartConfigEl.innerHTML || '{}');
+
+      // Fetch the updated cart and update the view
+      Shopify.theme.cart.getCart().then(Cart => {
+        Shopify.theme.ajaxCart.updateView(config, Cart);
+
+      // Open the correct cart UI
+      if (config.cart_action === 'drawer') {
+        Shopify.theme.ajaxCart.showDrawer(config);
+      } else if (config.cart_action === 'modal_cart') {
+        Shopify.theme.ajaxCart.showModal(config);
+      }
+  })
+      }).catch(error => {
+        console.error("Error adding product to cart:", error);
+      })
+    }) 
+
+  })
+
+
+    
 
  
 
