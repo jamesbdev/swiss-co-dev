@@ -11,29 +11,30 @@
      {% for collection in product.collections %}
       {% if collection.handle == "pre-owned-wallets"  or collection.handle == "pre-owned-bags" %}
         {% assign license_product = all_products['digital-authentication-certificate-test'] %}
-        <div class="license-card">
-          <div class="flex-container"> 
-          {{ license_product.featured_image | image_url: width: 400 | image_tag: width: 50, height: 50 }}
-          <div class="product-information"> 
-            <!-- product vendor -->
-            <h3 class="product-vendor">{{ license_product.vendor }}</h3>
-            <h4 class="product__section-title product-title">{{ license_product.title | capitalize }}</h4>
-            <p class="license-price"> {{ license_product.price | money_with_currency}}</p>
-         </div>
-         
+        <a href="{{ license_product.url }}" class="secondary-product-card-link"> 
+          <div class="license-card">
+            <div class="flex-container"> 
+            {{ license_product.featured_image | image_url: width: 400 | image_tag: width: 50, height: 50 }}
+            <div class="product-information"> 
+              <h3 class="product-vendor">{{ license_product.vendor }}</h3>
+              <h4 class="product__section-title product-title">{{ license_product.title | capitalize }}</h4>
+              <p class="license-price"> {{ license_product.price | money_with_currency}}</p>
           </div>
-         
-       {%  assign variant_id = license_product.first_available_variant.id %}
-         <button 
-            type="button" 
-            name="add" 
-            class="clearfix AddtoCart js-ajax-submit secondary-add-to-cart" 
-            data-product-id="{{ variant_id }}" 
-            data-product-quantity="1">
-           
-             <span class="add-to-cart-text">{{ 'products.product.add_to_cart' | t }}</span>
-         </button>
-        </div>
+          
+            </div>
+          
+        {%  assign variant_id = license_product.first_available_variant.id %}
+          <button 
+              type="button" 
+              name="add" 
+              class="clearfix AddtoCart js-ajax-submit secondary-add-to-cart" 
+              data-product-id="{{ variant_id }}" 
+              data-product-quantity="1">
+            
+              <span class="add-to-cart-text">{{ 'products.product.add_to_cart' | t }}</span>
+          </button>
+          </div>
+        </a>
         
     
   

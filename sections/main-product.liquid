@@ -616,19 +616,15 @@
     {% render 'secondary-product-card' %}
   {% endif  %}
 
-{% comment  %}
- -make blog for product page contact forms
-  - make offer form
-  - make enquiry form 
-  - if the block is enabled it renders the contact forms
-  - additionally can check for product tag  
- {% endcomment %}
+
 {% when "product_contact_forms" %}
-  {% if product.tags contains "hide-add-to-cart" %}
-    {% render 'enquiry-form' %}
-    {% render 'offer-form' %}
+  {% if  'show_contact_forms' %}
+    {% if product.tags contains "hide-add-to-cart" %}
+      {% render 'enquiry-form' %}
+      {% render 'offer-form' %}
+    {% endif  %}
   {% endif  %}
-           
+         
   
   {%- when 'product_description' -%}
 
@@ -896,7 +892,7 @@
         "label": "Show contact forms",
         "default": false,
         "info": "Enable to show contact forms for make offer and make enquiry."
-    }
+      }
      ]
       
     },

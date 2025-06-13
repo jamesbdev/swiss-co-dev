@@ -76,6 +76,11 @@ button#addToCart .add-to-cart-text {
   display: none;
 }
 
+.swym-atw-button-container {
+  display: none;
+}
+
+
 /* Product page enquiry forms */
 
 .enquiry-form-modal .first-name {
