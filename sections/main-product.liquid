@@ -611,20 +611,25 @@
   {%-  endform -%}
   </div>
 
-  <!-- display license add to cart for pre-owned bags and wallets -->
-   {% render 'secondary-product-card' %}
+{%  when 'product_certification' %}
+  {% if  'show_certification' %}
+    {% render 'secondary-product-card' %}
+  {% endif  %}
 
-  <!-- add contact forms here -->
-  {% render 'enquiry-form' %}
-  {% render 'offer-form' %}
+{% comment  %}
+ -make blog for product page contact forms
+  - make offer form
+  - make enquiry form 
+  - if the block is enabled it renders the contact forms
+  - additionally can check for product tag  
+ {% endcomment %}
+{% when "product_contact_forms" %}
+  {% if product.tags contains "hide-add-to-cart" %}
+    {% render 'enquiry-form' %}
+    {% render 'offer-form' %}
+  {% endif  %}
            
-   <!-- add upsell section --> 
-   {% comment  %}
-    - check for pre-owned bags or pre-owned wallets collections 
-    - if the product is in one of these collections, 
-      - display call to action to buy Digital certificate 
-      - display call to action to buy  
-    {% endcomment %}     
+  
   {%- when 'product_description' -%}
 
             {% unless tabs_active %}
@@ -646,6 +651,8 @@
                 {% assign product_tabs_shown = true %}
             </div>
             {% endif %}
+
+ 
           {% when 'tab_question' %}
             {% if product_tabs_shown == false %}
             <div class="product__section--{{ block.type }} product__decription-container rte product__section--element" {{ block.shopify_attributes }}>
@@ -693,6 +700,7 @@
               {% if block.settings.link != blank %}</a>{% endif %}
             </div>
             {% endif %}
+        
 
           {%- when 'share' -%}
             <div class="product__section--share product__share-container product__section--element" {{ block.shopify_attributes }}>
@@ -879,6 +887,18 @@
           "info":"Add app snippets or other Liquid code to create advanced customizations [Learn more](https:\/\/shopify.dev\/docs\/api\/liquid)"
         }
       ]
+    }, {
+     "type": "product_contact_forms",
+     "name": "Product contact forms",
+     "settings": [ {
+        "type": "checkbox",
+        "id": "show_contact_forms",
+        "label": "Show contact forms",
+        "default": false,
+        "info": "Enable to show contact forms for make offer and make enquiry."
+    }
+     ]
+      
     },
     {
       "type": "image",
@@ -921,6 +941,20 @@
       "name": "Pickup availability",
       "limit": 1,
       "settings": []
+    },
+    { 
+      "type": "product_certification",
+      "name": "Product certification",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_certification",
+          "label": "Show product certification",
+          "default": true,
+          "info": "Show product certification information if available."
+        }
+      ]
     },
     {
       "type": "product_buttons",

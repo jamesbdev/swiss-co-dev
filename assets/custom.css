@@ -63,6 +63,7 @@ button#addToCart .add-to-cart-text {
   margin-bottom: 5px;
   background: none;
   color: black;
+  font-size: 18px;
 
 }
 
@@ -175,6 +176,13 @@ button#addToCart .add-to-cart-text {
 .license-card .product-information {
   display: flex;
   flex-direction: column;
+}
+
+.secondary-add-to-cart {
+  background: darkgrey;
+  font-weight: 600;
+  width: 75%;
+  
 }
 
 
