@@ -59,7 +59,7 @@ button#addToCart .add-to-cart-text {
   display: none;
 }
 
-.swym-button {
+.wishlist-icon-container button.swym-button {
   margin-bottom: 5px;
   background: none;
   color: black;
