@@ -8144,10 +8144,8 @@ if( makeEnquiryBtn) {
 
   })
 
-  // Show hide behaviour for filters on mobile
-  // get the filter button
-  // get the filters container
-  // get close filter button
+  // Show / hide behaviour for filters on mobile
+
   const filterButton = document.querySelector("#showFiltersBtn");
   const filterContainer = document.querySelector(".collection__page-filter");
   const hideFiltersButton = document.querySelector("#hideFiltersBtn");
@@ -8161,8 +8159,6 @@ if( makeEnquiryBtn) {
       // show filter container
       filterContainer.classList.toggle("mobile-hide");
       // hide the filter buttton
-      //this.classList.toggle("hidden");
-      //this.style.display = "none";
       this.classList.add("hidden");
       // show the hide filters button
       hideFiltersButton.classList.remove("hidden");
@@ -8182,8 +8178,7 @@ if( makeEnquiryBtn) {
   }
  
 
-  //add event listener to the filter button
-   //toggle the hidden class on the filter container 
+
 
 
     
