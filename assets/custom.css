@@ -186,25 +186,19 @@ button#addToCart .add-to-cart-text {
   
 }
 
-/* hide filters on mobile */
-/* .collection__page-filter {
-  display: none
-} */
+/* hide and show filters on mobile */
 
 .show-filters-btn, .hide-filters-btn {
   margin-bottom: 15px;
 }
 
-.show-filters-btn {
-  display: flex; 
+.show-filters-btn, .hide-filters-btn {
   align-items: center;
   gap: 10px;
 }
 
-.hide-filters-btn {
-  display: none;
-  align-items: center;
-  gap: 10px;
+.show-filters-btn {
+  display: flex;
 }
 
 @media screen and (min-width: 990px) {
