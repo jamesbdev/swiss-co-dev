@@ -8164,7 +8164,8 @@ if( makeEnquiryBtn) {
       //this.classList.toggle("hidden");
       this.style.display = "none";
       // show the hide filters button
-      hideFiltersButton.classList.toggle("hidden");
+      //hideFiltersButton.classList.toggle("hidden");
+      hideFiltersButton.style.display = "flex";
 
   })
 
@@ -8173,7 +8174,7 @@ if( makeEnquiryBtn) {
       // hide the filter container
       filterContainer.classList.toggle("mobile-hide");
       //hide the hide filters button
-      this.classList.toggle("hidden");
+      this.style.display = "none";
       // Show the filters button
       filterButton.style.display = "flex";
     })

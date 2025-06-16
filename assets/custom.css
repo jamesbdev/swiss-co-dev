@@ -200,6 +200,12 @@ button#addToCart .add-to-cart-text {
   gap: 10px;
 }
 
+.hide-filters-btn {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
 @media screen and (min-width: 990px) {
   .show-filters-btn, .hide-filters-btn {
     display: none;

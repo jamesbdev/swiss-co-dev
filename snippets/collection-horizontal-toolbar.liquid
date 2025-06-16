@@ -27,7 +27,14 @@
    fill: 'white',
    hover: 'var(--text-color)' %}
  </button>
- <button class="hide-filters-btn hidden" id="hideFiltersBtn">X Hide filters</button>
+ <button class="hide-filters-btn hidden" id="hideFiltersBtn"> {% render 'snip-icons',
+   wrapper: '',
+   type: 'apollo',
+   icon: 'close',
+   classes: 'close--icon',
+   size: '14px',
+   fill: 'white',
+   hover: 'var(--text-color)' %} Hide filters</button>
 
 {% if horizontal_filtering_enabled or horizontal_sort %}
   {% liquid
