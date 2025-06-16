@@ -8162,9 +8162,10 @@ if( makeEnquiryBtn) {
       filterContainer.classList.toggle("mobile-hide");
       // hide the filter buttton
       //this.classList.toggle("hidden");
-      this.style.display = "none";
+      //this.style.display = "none";
+      this.classList.add("hidden");
       // show the hide filters button
-      //hideFiltersButton.classList.toggle("hidden");
+      hideFiltersButton.classList.remove("hidden");
       hideFiltersButton.style.display = "flex";
 
   })
@@ -8174,9 +8175,9 @@ if( makeEnquiryBtn) {
       // hide the filter container
       filterContainer.classList.toggle("mobile-hide");
       //hide the hide filters button
-      this.style.display = "none";
+      this.classList.add("hidden");
       // Show the filters button
-      filterButton.style.display = "flex";
+      filterButton.classList.remove("hidden")
     })
   }
  

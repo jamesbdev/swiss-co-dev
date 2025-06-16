@@ -120,8 +120,9 @@ button#addToCart .add-to-cart-text {
 
 }
 
+/* hide element when this gets added */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* mobile menu */
@@ -195,7 +196,7 @@ button#addToCart .add-to-cart-text {
 }
 
 .show-filters-btn {
-  display: flex;
+  display: flex; 
   align-items: center;
   gap: 10px;
 }
