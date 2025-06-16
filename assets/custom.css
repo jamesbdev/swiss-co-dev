@@ -209,7 +209,7 @@ button#addToCart .add-to-cart-text {
 
 @media screen and (min-width: 990px) {
   .show-filters-btn, .hide-filters-btn {
-    display: none;
+    display: none !important;
   }
 }
 
