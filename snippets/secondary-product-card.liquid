@@ -9,7 +9,7 @@
       
     {% endcomment %}
      {% for collection in product.collections %}
-      {% if collection.handle == "pre-owned-wallets"  or collection.handle == "pre-owned-bags" %}
+      {% if collection.handle contains "pre-owned" %}
         {% assign license_product = all_products['digital-authentication-certificate-test'] %}
         <a href="{{ license_product.url }}" class="secondary-product-card-link"> 
           <div class="license-card">
