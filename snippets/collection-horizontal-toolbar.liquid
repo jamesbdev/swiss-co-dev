@@ -16,9 +16,18 @@
     collection: collection
   %}
 
-{% endcomment %}
- <button class="show-filters-btn" id="showFiltersBtn">Filter / Sort</button>
- <button class="hide-filters-btn hidden" id="hideFiltersBtn">Hide filters</button>
+{% endcomment %} 
+ <button class="show-filters-btn" id="showFiltersBtn"> Filter / Sort
+    {% render 'snip-icons',
+   wrapper: '',
+   type: 'fash-theme',
+   icon: 'filter',
+   classes: 'filter--icon',
+   size: '14px',
+   fill: 'white',
+   hover: 'var(--text-color)' %}
+ </button>
+ <button class="hide-filters-btn hidden" id="hideFiltersBtn">X Hide filters</button>
 
 {% if horizontal_filtering_enabled or horizontal_sort %}
   {% liquid

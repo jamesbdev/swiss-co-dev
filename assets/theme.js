@@ -8161,7 +8161,8 @@ if( makeEnquiryBtn) {
       // show filter container
       filterContainer.classList.toggle("mobile-hide");
       // hide the filter buttton
-      this.classList.toggle("hidden");
+      //this.classList.toggle("hidden");
+      this.style.display = "none";
       // show the hide filters button
       hideFiltersButton.classList.toggle("hidden");
 
@@ -8172,11 +8173,9 @@ if( makeEnquiryBtn) {
       // hide the filter container
       filterContainer.classList.toggle("mobile-hide");
       //hide the hide filters button
-      console.log(this);
       this.classList.toggle("hidden");
       // Show the filters button
-      //console.log(showFiltersButton);
-      filterButton.classList.remove("hidden");
+      filterButton.style.display = "flex";
     })
   }
  
