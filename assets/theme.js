@@ -8144,6 +8144,46 @@ if( makeEnquiryBtn) {
 
   })
 
+  // Show hide behaviour for filters on mobile
+  // get the filter button
+  // get the filters container
+  // get close filter button
+  const filterButton = document.querySelector("#showFiltersBtn");
+  const filterContainer = document.querySelector(".collection__page-filter");
+  const hideFiltersButton = document.querySelector("#hideFiltersBtn");
+  
+  if (!filterButton || !filterContainer || !hideFiltersButton) {
+    console.log("filter buttons or container not found");
+   
+  } else {
+     filterButton.addEventListener("click", function(event){
+      event.preventDefault();
+      // show filter container
+      filterContainer.classList.toggle("mobile-hide");
+      // hide the filter buttton
+      this.classList.toggle("hidden");
+      // show the hide filters button
+      hideFiltersButton.classList.toggle("hidden");
+
+  })
+
+    hideFiltersButton.addEventListener("click", function(event){
+      event.preventDefault();
+      // hide the filter container
+      filterContainer.classList.toggle("mobile-hide");
+      //hide the hide filters button
+      console.log(this);
+      this.classList.toggle("hidden");
+      // Show the filters button
+      //console.log(showFiltersButton);
+      filterButton.classList.remove("hidden");
+    })
+  }
+ 
+
+  //add event listener to the filter button
+   //toggle the hidden class on the filter container 
+
 
     
 

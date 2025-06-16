@@ -17,12 +17,14 @@
   %}
 
 {% endcomment %}
+ <button class="show-filters-btn" id="showFiltersBtn">Filter / Sort</button>
+ <button class="hide-filters-btn hidden" id="hideFiltersBtn">Hide filters</button>
 
 {% if horizontal_filtering_enabled or horizontal_sort %}
   {% liquid
     assign swatch_option_names = settings.swatch_option_names | replace: ' ,', ',' | replace: ', ', ',' | split: ',' | downcase
   %}
-  <div class="collection__page-filter" data-collection-filters-hz {{ block.shopify_attributes }}>
+  <div class="collection__page-filter mobile-hide" data-collection-filters-hz {{ block.shopify_attributes }}>
     <div class="collection__horizontal-toolbar filtering__wrapper">
       <p>{{ 'collections.filters.filter_by_label' | t }}</p>
       <ul id="collection--filters" role="list">
