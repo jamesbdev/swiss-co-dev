@@ -195,6 +195,7 @@ button#addToCart .add-to-cart-text {
 .show-filters-btn, .hide-filters-btn {
   align-items: center;
   gap: 10px;
+  min-width: 155px;
 }
 
 .show-filters-btn {
