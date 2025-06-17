@@ -17,6 +17,9 @@
   %}
 
 {% endcomment %} 
+ {%  comment  %}
+   - added show and hide buttons for filters
+ {%  endcomment  %}
  <button class="show-filters-btn" id="showFiltersBtn"> Filter / Sort
     {% render 'snip-icons',
    wrapper: '',
@@ -35,6 +38,7 @@
    size: '14px',
    fill: 'white',
    hover: 'var(--text-color)' %} Hide filters</button>
+ 
 
 {% if horizontal_filtering_enabled or horizontal_sort %}
   {% liquid
