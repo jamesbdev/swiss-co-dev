@@ -206,6 +206,7 @@ button#addToCart .add-to-cart-text {
   .show-filters-btn, .hide-filters-btn {
     display: none !important;
   }
+
 }
 
 @media screen and (max-width: 989px) {

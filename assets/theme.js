@@ -6573,6 +6573,7 @@ theme.CollectionFilters = {
 				const searchParams = new URLSearchParams(formData).toString();
 
 				theme.CollectionFilters.renderPage(searchParams);
+        
 			});
 		});
 
@@ -8121,7 +8122,9 @@ const fixCarouselsWithBadges = (function() {
 
   })
 
-  // Show / hide behaviour for filters on mobile
+  
+  /* -Show / hide behaviour for filters on mobile
+  - this code may not be needed if the theme already has a mobile filter toggle 
 function setUpFilterToggle() {
   const filterButton = document.querySelector("#showFiltersBtn");
   const filterContainer = document.querySelector(".collection__page-filter");
@@ -8170,7 +8173,7 @@ const observer = new MutationObserver(() => {
 // Observe for child changes (additions/removals)
 observer.observe(filterParent, { childList: true, subtree: true });
 
-// console.log(theme.CollectionFilters);
+*/ 
 
 
 
