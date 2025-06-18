@@ -20,7 +20,7 @@
  {%  comment  %}
    - added show and hide buttons for filters
  {%  endcomment  %}
- <button class="show-filters-btn" id="showFiltersBtn"> Filter / Sort
+ <button type="button" class="show-filters-btn" id="showFiltersBtn"> Filter / Sort
     {% render 'snip-icons',
    wrapper: '',
    type: 'fash-theme',
@@ -30,7 +30,7 @@
    fill: 'white',
    hover: 'var(--text-color)' %}
  </button>
- <button class="hide-filters-btn hidden" id="hideFiltersBtn"> {% render 'snip-icons',
+ <button type="button" class="hide-filters-btn hidden" id="hideFiltersBtn"> {% render 'snip-icons',
    wrapper: '',
    type: 'apollo',
    icon: 'close',

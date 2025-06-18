@@ -8145,7 +8145,7 @@ if( makeEnquiryBtn) {
   })
 
   // Show / hide behaviour for filters on mobile
-
+function setUpFilterToggle() {
   const filterButton = document.querySelector("#showFiltersBtn");
   const filterContainer = document.querySelector(".collection__page-filter");
   const hideFiltersButton = document.querySelector("#hideFiltersBtn");
@@ -8176,7 +8176,22 @@ if( makeEnquiryBtn) {
       filterButton.classList.remove("hidden")
     })
   }
+}
+
+//add event listeners when loading the page
+setUpFilterToggle();
+
+//observe for changes in the filter parent container
+const filterParent = document.querySelector(".collection__page-filter");
+
+const observer = new MutationObserver(() => {
+  setUpFilterToggle();
+})
+
+// Observe for child changes (additions/removals)
+observer.observe(filterParent, { childList: true, subtree: true });
  
+
 
 
 

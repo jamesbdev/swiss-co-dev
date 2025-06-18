@@ -87,6 +87,11 @@ data-collection-link="{{ collection_link }}">
       {%- endif -%}
 
       {%- if horizontal_filtering_enabled or horizontal_sort -%}
+        {%  comment  %}
+          - Show buttons to show and hide filters on mobile
+            {% render 'show-filters-buttons' %}
+        {%  endcomment  %}
+      
         <form id="CollectionFiltersForm" class="span-12 md-span-12 auto" data-collection-filters>
           {% render 'collection-horizontal-toolbar',
             collection: collection,
