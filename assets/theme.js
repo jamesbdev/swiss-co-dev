@@ -6349,6 +6349,7 @@ theme.CollectionFilters = {
 
 			dropdownArray.forEach(item => {
 				item.addEventListener('click', (evt) => {
+          
 
 					if ( item.querySelector('input[type="checkbox"]').checked ) {
 						item.classList.remove('current');
@@ -8072,30 +8073,6 @@ const fixCarouselsWithBadges = (function() {
 
 
 
-if (makeOfferBtn) {
-  makeOfferBtn.addEventListener('click', function(event) {
-    // display modal 
-    event.preventDefault();
-    console.log("clicked");
-  //  offerModal.classList.toggle("hidden");
-    //open modal 
- 
-    // create form 
-    // get form id 
-    // display the form
-  });
-}
-
-if( makeEnquiryBtn) {
-  makeEnquiryBtn.addEventListener('click', function(event) {
-    event.preventDefault();
-    console.log("clicked");
-    // display contact us modal 
-   // enquiryModal.classList.toggle("hidden");
-    // get the form id 
-    // show the form 
-  })
-} 
 
 //logic for the secondary add to cart button 
  const addToCartButtons = document.querySelectorAll(".secondary-add-to-cart");
@@ -8155,6 +8132,7 @@ function setUpFilterToggle() {
    
   } else {
      filterButton.addEventListener("click", function(event){
+      console.log("clicked");
       event.preventDefault();
       // show filter container
       filterContainer.classList.toggle("mobile-hide");
@@ -8185,11 +8163,17 @@ setUpFilterToggle();
 const filterParent = document.querySelector(".collection__page-filter");
 
 const observer = new MutationObserver(() => {
+  console.log("filter parent changed");
   setUpFilterToggle();
 })
 
 // Observe for child changes (additions/removals)
 observer.observe(filterParent, { childList: true, subtree: true });
+
+// console.log(theme.CollectionFilters);
+
+
+
  
 
 
