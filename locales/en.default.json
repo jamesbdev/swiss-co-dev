@@ -172,6 +172,7 @@
       "send_offer": "Send Offer",
       "offer": "Offer",
       "make_enquiry_description": "Please fill this form and a member of Swiss Co will contact you shortly.",
+      "make_offer_description": "Please fill the form to make an offer on <strong>{{ product.title }}</strong>, and one of our team members will contact you."
     },
     "tabbed_collections": {
       "collection": "Collection {{ index }}"
