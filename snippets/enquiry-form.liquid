@@ -2,9 +2,9 @@
 
 <div class="enquiry-form">
 {% form 'contact' %}
-  <h2>Make an Enquiry</h2> 
+  <h2>{{ "sections.contact_form.make_enquiry" | t }}</h2> 
   {{ form.errors | default_errors }}
-  <p>Please fill this form and a member of Swiss Co will contact you.</p>
+  <p> {{ "sections.contact_form.make_enquiry_description" | t }}.</p>
  <div class="enquiry-first-row">
     <div class="first-name">
     <label for="first-name">First name</label>
