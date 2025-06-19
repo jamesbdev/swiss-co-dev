@@ -8073,6 +8073,24 @@ const fixCarouselsWithBadges = (function() {
  const enquiryModal = document.querySelector(".enquiry-form-modal");
 
 
+if (makeOfferBtn) {
+  makeOfferBtn.addEventListener('click', function(event) {
+    // display modal 
+    event.preventDefault();
+    console.log("clicked");
+ 
+  });
+}
+
+if( makeEnquiryBtn) {
+  makeEnquiryBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log("clicked");
+
+  })
+} 
+
+
 
 
 //logic for the secondary add to cart button 
