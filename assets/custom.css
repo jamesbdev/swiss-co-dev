@@ -164,9 +164,16 @@ button#addToCart .add-to-cart-text {
 }
 
 .license-card img {
-  width: 100px;
+  width: 155px;
   height: auto;
-  flex-basis: 120px;
+  flex-basis: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .license-card img {
+    flex-basis: 150px;
+    width: 100px;
+  }
 }
 
 .license-card .flex-container {
