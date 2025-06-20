@@ -1,10 +1,11 @@
-<div class="enquiry-form-modal hidden" data-wau-modal-content="enquiry-form">
+<div class="enquiry-form-modal hidden" 
+     data-wau-modal-content="enquiry-form">
 
 <div class="enquiry-form">
 {% form 'contact' %}
   <h2>{{ "sections.contact_form.make_enquiry" | t }}</h2> 
   {{ form.errors | default_errors }}
-  <p> {{ "sections.contact_form.make_enquiry_description" | t }}.</p>
+  <p> {{ "sections.contact_form.make_enquiry_description" | t }}</p>
  <div class="enquiry-first-row">
     <div class="first-name">
     <label for="first-name">First name</label>
