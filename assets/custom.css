@@ -223,6 +223,12 @@ button#addToCart .add-to-cart-text {
 }
 
 
+ /* put search icon inline with search bar */
+.header-search-form__inner {
+  display: flex;
+}
+
+
 
 
 

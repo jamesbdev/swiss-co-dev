@@ -136,7 +136,7 @@
 
       <div class="cart--container">
         <ul class="shopping--cart_links">
-          <li class="search-icon"{% if section.settings.search_layout != 'modal' %} style="display: none"{% endif %}>
+          <li class="search-icon">
             <button class="slideout__trigger-search button-as-link js-modal-open"
                     data-wau-modal-target="search-modal"
                     aria-label="{{ 'sections.search.placeholder' | t }}"
@@ -152,11 +152,15 @@
                    fill: 'var(--cart-links)',
                    hover: 'var(--cart-links)' %}
             </button>
-            {% if section.settings.search_layout == 'modal' %}
-              <div class="search-modal-content" data-wau-modal-content="search-modal" data-wau-modal-full style="display: none;" data-wau-modal-remove-original>
+            
+            {% comment %} {% if section.settings.search_layout == 'modal' %} {% endcomment %}
+              <div class="search-modal-content" 
+                 data-wau-modal-content="search-modal" 
+                 data-wau-modal-full style="display: none;" 
+                 data-wau-modal-remove-original>
                 {{ search }}
               </div>
-            {% endif %}
+            {% comment %} {% endif %} {% endcomment %}
           </li>
 
           {% if shop.customer_accounts_enabled %}
