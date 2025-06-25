@@ -143,7 +143,7 @@
    </div>
 
    {% if settings.quickview_type != 'none' %}
-
+    {%  unless product.tags contains 'hide-add-to-cart' %}
     {%- liquid
 
       if settings.quickview_type == 'modal'
@@ -155,21 +155,25 @@
       endif
 
     -%}
-
+    
      <button class="quick-view-{{ product.id }} product-listing__quickview-trigger {{ quickview_classes }} js-quickview-trigger"
        type="button"
        name="button"
        {{ quickview_settings }}
        data-product-url="{{ product.url }}?view=quick">{{ 'products.general.quick_view' | t }}</button>
+     {% endunless %}
    {% endif %}
 
    {% if show_quickadd and product.available %}
+    {%  unless product.tags contains "hide-add-to-cart" %}
       {% render 'product-grid-add'
         product: product,
         color_swatch_style: settings.color_swatch_style,
         show_quickview: show_quickview,
         show_sizes: show_sizes,
         show_swatches: show_swatches %}
+       
+    {%  endunless %}
    {% endif %}
 
 </div>
