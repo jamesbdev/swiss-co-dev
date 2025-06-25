@@ -165,7 +165,6 @@
    {% endif %}
 
    {% if show_quickadd and product.available %}
-    {%  unless product.tags contains "hide-add-to-cart" %}
       {% render 'product-grid-add'
         product: product,
         color_swatch_style: settings.color_swatch_style,
@@ -173,7 +172,6 @@
         show_sizes: show_sizes,
         show_swatches: show_swatches %}
        
-    {%  endunless %}
    {% endif %}
 
 </div>
