@@ -1,1 +1,75 @@
-{"name":"Footer","type":"footer","sections":{"6e1e7f0e-a8ab-4b5d-b533-03e147b1d76c":{"type":"newsletter","settings":{"show_social_icons":true,"heading":"Subscribe to our newsletter","newsletter_subheading":"<p>Signup for our newsletter to stay up to date on sales and events.<\/p>","text_color":"#ffffff","newsletter_background":"#000000","newsletter_button_color":"#ffffff"}},"footer":{"type":"footer","blocks":{"1480973003673":{"type":"blog","settings":{"footer_blog":"news","heading":"Recent posts","post_limit":3}},"1480972996114":{"type":"menu","settings":{"footer_nav":"help-center","heading":"Help Center"}},"menu_HrXFrP":{"type":"menu","settings":{"footer_nav":"footer","heading":"About"}}},"block_order":["1480973003673","1480972996114","menu_HrXFrP"],"settings":{"footer_text_align":"left","footer_title_transform":"uppercase","footer_title_size":14,"show_credit_cards":true,"show_social_icons":true,"show_policy":false,"enable_follow_on_shop":true,"show_copyright":true,"show_locale_selector":true,"show_country_selector":true,"show_flag":true}}},"order":["6e1e7f0e-a8ab-4b5d-b533-03e147b1d76c","footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Footer",
+  "type": "footer",
+  "sections": {
+    "6e1e7f0e-a8ab-4b5d-b533-03e147b1d76c": {
+      "type": "newsletter",
+      "settings": {
+        "show_social_icons": true,
+        "heading": "Subscribe to our newsletter",
+        "newsletter_subheading": "<p>Signup for our newsletter to stay up to date on sales and events.</p>",
+        "text_color": "#ffffff",
+        "newsletter_background": "#000000",
+        "newsletter_button_color": "#ffffff"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "1480973003673": {
+          "type": "blog",
+          "settings": {
+            "footer_blog": "news",
+            "heading": "Recent posts",
+            "post_limit": 3
+          }
+        },
+        "1480972996114": {
+          "type": "menu",
+          "settings": {
+            "footer_nav": "help-center",
+            "heading": "Help Center"
+          }
+        },
+        "menu_HrXFrP": {
+          "type": "menu",
+          "settings": {
+            "footer_nav": "footer",
+            "heading": "About"
+          }
+        }
+      },
+      "block_order": [
+        "1480973003673",
+        "1480972996114",
+        "menu_HrXFrP"
+      ],
+      "settings": {
+        "footer_text_align": "left",
+        "footer_title_transform": "uppercase",
+        "footer_title_size": 14,
+        "show_credit_cards": true,
+        "show_social_icons": true,
+        "show_policy": false,
+        "enable_follow_on_shop": false,
+        "show_copyright": true,
+        "show_locale_selector": true,
+        "show_country_selector": true,
+        "show_flag": true
+      }
+    }
+  },
+  "order": [
+    "6e1e7f0e-a8ab-4b5d-b533-03e147b1d76c",
+    "footer"
+  ]
+}

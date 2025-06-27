@@ -64,7 +64,7 @@ button#addToCart .add-to-cart-text {
   background: none;
   color: black;
   font-size: 18px;
-  padding: 0 0 0 10px;
+  padding: 0 10px;
 }
 
 .swym-button:hover {

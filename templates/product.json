@@ -1,1 +1,253 @@
-{"sections":{"main":{"type":"main-product","blocks":{"product_vendor_CC7Qqq":{"type":"product_vendor","settings":{}},"product_title_GnGRca":{"type":"product_title","settings":{}},"product_price_xYUHHA":{"type":"product_price","settings":{"show_tax_information":false}},"text_with_icon_8yiVPU":{"type":"text_with_icon","settings":{"text":"<p>Authenticity Guaranteed<\/p>","icon":"verified"}},"text_with_icon_Fj6mBD":{"type":"text_with_icon","settings":{"text":"<p>Secure online shopping<\/p>","icon":"security"}},"text_with_icon_g4HfkA":{"type":"text_with_icon","settings":{"text":"<p>Estimated delivery time: 1-2 weeks<br\/><br\/><\/p>","icon":"ship-truck"}},"896887d5-6a65-431c-9081-550cbc1a6676":{"type":"product_variants","settings":{"show_size_chart":false,"size_chart_page":"","size_chart_label":"Size chart","size_chart_option_name":"Size"}},"d9681722-e21d-42cb-b517-5a22bc70b2e5":{"type":"product_quantity","settings":{}},"569acd10-43ac-4854-adc8-bc64927b54bb":{"type":"product_buttons","settings":{"show_gift_card_recipient":false}},"wishlist_plus_wishlist_pdp_button_pAhTjL":{"type":"shopify:\/\/apps\/wishlist-plus\/blocks\/wishlist-pdp-button\/80c3b1fc-3a8f-407e-8367-ffdeebb8b612","settings":{"swym_atw_button_icon":"heart","swym_atw_icon_thickness":1.7,"swym_atw_display_btn_text":true,"swym_button_position":"default","swym_atw_button_vertical_offset":-10,"swym_atw_full_width":true,"swym_atw_button_alignment":"center","swym_add_to_wishlist_color":"#000000","swym_added_to_wishlist_color":"#000000","swym_button_text_color":"#ffffff","swym_atw_border_color":"#000000","swym_atw_border_thickness":0,"swym_atw_button_border_radius":0,"swym_enable_hover_customization":false,"swym_hover_add_to_wishlist_color":"#000000","swym_hover_added_to_wishlist_color":"#222222","swym_hover_button_text_color":"#ffffff","swym_hover_atw_border_color":"#000000","swym_hover_atw_border_thickness":0,"swym_hover_atw_button_border_radius":0,"swym_custom_css":""}},"text_with_icon_FKBhmk":{"type":"text_with_icon","settings":{"text":"<p><strong>Note:<\/strong> Delivery times may occasionally be delayed. If this order is time-sensitive, please <a href=\"\/pages\/contact\" title=\"Contact\">contact us<\/a> before ordering to confirm the delivery time.<\/p>","icon":"clock"}},"payment_icons_Vxe3Kj":{"type":"payment_icons","settings":{"title":"Secure online shopping","background_color":"#f5f5f5"}},"share_YE666a":{"type":"share","settings":{}},"1af258e7-17dd-4fe5-bccb-351630d70821":{"type":"product_description","settings":{}},"ec330da2-623f-492b-97e6-ebb0396c1c58":{"type":"tab_content","settings":{"tab_title":"Delivery","tab_text":"<p>Add text which will be shown in tabs across all product pages. Use metafields to add unite content per product.<\/p>"}},"99c90ebd-bddf-457b-993b-38360f657fd4":{"type":"tab_content","settings":{"tab_title":"Warranty","tab_text":"<p>Add text which will be shown in tabs across all product pages. Use metafields to add unite content per product.<\/p>"}}},"block_order":["product_vendor_CC7Qqq","product_title_GnGRca","product_price_xYUHHA","text_with_icon_8yiVPU","text_with_icon_Fj6mBD","text_with_icon_g4HfkA","896887d5-6a65-431c-9081-550cbc1a6676","d9681722-e21d-42cb-b517-5a22bc70b2e5","569acd10-43ac-4854-adc8-bc64927b54bb","wishlist_plus_wishlist_pdp_button_pAhTjL","text_with_icon_FKBhmk","payment_icons_Vxe3Kj","share_YE666a","1af258e7-17dd-4fe5-bccb-351630d70821","ec330da2-623f-492b-97e6-ebb0396c1c58","99c90ebd-bddf-457b-993b-38360f657fd4"],"custom_css":[".secondary-button {font-weight: bold;}"],"settings":{"product_background":"","thumbnail_position":"left","click_to_enlarge":true,"enable_video_looping":false,"adaptive_height":true}},"product-content":{"type":"main-product-content","blocks":{"fb1f4d16-df0d-45b5-9465-721dc7a91c53":{"type":"product_description","settings":{"label":"Product details","block_width":"medium"}}},"block_order":["fb1f4d16-df0d-45b5-9465-721dc7a91c53"],"disabled":true,"settings":{"color":"#000000","background":"#f9f9f9"}},"related-products":{"type":"related-products","blocks":{"product_PpRLLQ":{"type":"product","settings":{"product":"omega-de-ville-424-10-37-20-04-001"}}},"block_order":["product_PpRLLQ"],"disabled":true,"settings":{"title":"","section_padding":"both"}},"1625847223ea0ebb04":{"type":"image-with-text-overlay","disabled":true,"settings":{"scale":2,"page_height":500,"caption_position":"middle_center","caption_below":false,"heading":"Image with text overlay","subheading":"<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>","button_text":"Add a button","button_link":"","heading_font_size":30,"subheading_font_size":15,"text_color":"#ffffff","button_text_color":"#ffffff","button_color":"#000000","background":"rgba(0,0,0,0)","overlay_color":"#000000","overlay_opacity":0,"section_padding":"both"}},"1625846216758d1de0":{"type":"image-with-text","settings":{"full_width":false,"section_padding":"both","appearance":"overlap","layout":"right","image_width":"50%","image_height":"natural","desktop_height":900,"mobile_height":600,"text_align":"left","heading":"Image with text","text":"<p>Pair text with an image to add details about your products, brand and selling proposition.<\/p>","button":"","link":"","background":"#ffffff","color":"#000000"}},"product-recommendations":{"type":"product-recommendations","settings":{"product_recommendations_heading":"Have you seen these","grid":4,"limit":4}}},"order":["main","product-content","related-products","1625847223ea0ebb04","1625846216758d1de0","product-recommendations"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_vendor_CC7Qqq": {
+          "type": "product_vendor",
+          "settings": {}
+        },
+        "product_title_GnGRca": {
+          "type": "product_title",
+          "settings": {}
+        },
+        "product_price_xYUHHA": {
+          "type": "product_price",
+          "settings": {
+            "show_tax_information": false
+          }
+        },
+        "text_with_icon_8yiVPU": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "<p>Authenticity Guaranteed</p>",
+            "icon": "verified"
+          }
+        },
+        "text_with_icon_Fj6mBD": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "<p>Secure online shopping</p>",
+            "icon": "security"
+          }
+        },
+        "text_with_icon_g4HfkA": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "<p>Estimated delivery time: 1-2 weeks<br/><br/></p>",
+            "icon": "ship-truck"
+          }
+        },
+        "896887d5-6a65-431c-9081-550cbc1a6676": {
+          "type": "product_variants",
+          "settings": {
+            "show_size_chart": false,
+            "size_chart_page": "",
+            "size_chart_label": "Size chart",
+            "size_chart_option_name": "Size"
+          }
+        },
+        "d9681722-e21d-42cb-b517-5a22bc70b2e5": {
+          "type": "product_quantity",
+          "settings": {}
+        },
+        "569acd10-43ac-4854-adc8-bc64927b54bb": {
+          "type": "product_buttons",
+          "settings": {
+            "show_gift_card_recipient": false
+          }
+        },
+        "wishlist_plus_wishlist_pdp_button_pAhTjL": {
+          "type": "shopify://apps/wishlist-plus/blocks/wishlist-pdp-button/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+          "settings": {
+            "swym_atw_button_icon": "heart",
+            "swym_atw_icon_thickness": 1.7,
+            "swym_atw_display_btn_text": true,
+            "swym_button_position": "default",
+            "swym_atw_button_vertical_offset": -10,
+            "swym_atw_full_width": true,
+            "swym_atw_button_alignment": "center",
+            "swym_add_to_wishlist_color": "#000000",
+            "swym_added_to_wishlist_color": "#000000",
+            "swym_button_text_color": "#ffffff",
+            "swym_atw_border_color": "#000000",
+            "swym_atw_border_thickness": 0,
+            "swym_atw_button_border_radius": 0,
+            "swym_enable_hover_customization": false,
+            "swym_hover_add_to_wishlist_color": "#000000",
+            "swym_hover_added_to_wishlist_color": "#222222",
+            "swym_hover_button_text_color": "#ffffff",
+            "swym_hover_atw_border_color": "#000000",
+            "swym_hover_atw_border_thickness": 0,
+            "swym_hover_atw_button_border_radius": 0,
+            "swym_custom_css": ""
+          }
+        },
+        "text_with_icon_FKBhmk": {
+          "type": "text_with_icon",
+          "settings": {
+            "text": "<p><strong>Note:</strong> Delivery times may occasionally be delayed. If this order is time-sensitive, please <a href=\"/pages/contact\" title=\"Contact\">contact us</a> before ordering to confirm the delivery time.</p>",
+            "icon": "clock"
+          }
+        },
+        "payment_icons_Vxe3Kj": {
+          "type": "payment_icons",
+          "settings": {
+            "title": "Secure online shopping",
+            "background_color": "#f5f5f5"
+          }
+        },
+        "product_certification_aNHXD8": {
+          "type": "product_certification",
+          "settings": {
+            "show_certification": true
+          }
+        },
+        "share_YE666a": {
+          "type": "share",
+          "settings": {}
+        },
+        "1af258e7-17dd-4fe5-bccb-351630d70821": {
+          "type": "product_description",
+          "settings": {}
+        },
+        "ec330da2-623f-492b-97e6-ebb0396c1c58": {
+          "type": "tab_content",
+          "settings": {
+            "tab_title": "Delivery",
+            "tab_text": "<p>Add text which will be shown in tabs across all product pages. Use metafields to add unite content per product.</p>"
+          }
+        },
+        "product_contact_forms_RVF3Ty": {
+          "type": "product_contact_forms",
+          "settings": {
+            "show_contact_forms": true
+          }
+        },
+        "99c90ebd-bddf-457b-993b-38360f657fd4": {
+          "type": "tab_content",
+          "settings": {
+            "tab_title": "Warranty",
+            "tab_text": "<p>Add text which will be shown in tabs across all product pages. Use metafields to add unite content per product.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_vendor_CC7Qqq",
+        "product_title_GnGRca",
+        "product_price_xYUHHA",
+        "text_with_icon_8yiVPU",
+        "text_with_icon_Fj6mBD",
+        "text_with_icon_g4HfkA",
+        "896887d5-6a65-431c-9081-550cbc1a6676",
+        "d9681722-e21d-42cb-b517-5a22bc70b2e5",
+        "569acd10-43ac-4854-adc8-bc64927b54bb",
+        "wishlist_plus_wishlist_pdp_button_pAhTjL",
+        "text_with_icon_FKBhmk",
+        "payment_icons_Vxe3Kj",
+        "product_certification_aNHXD8",
+        "share_YE666a",
+        "1af258e7-17dd-4fe5-bccb-351630d70821",
+        "ec330da2-623f-492b-97e6-ebb0396c1c58",
+        "product_contact_forms_RVF3Ty",
+        "99c90ebd-bddf-457b-993b-38360f657fd4"
+      ],
+      "custom_css": [
+        ".secondary-button {font-weight: bold;}"
+      ],
+      "settings": {
+        "product_background": "",
+        "thumbnail_position": "left",
+        "click_to_enlarge": true,
+        "enable_video_looping": false,
+        "adaptive_height": true
+      }
+    },
+    "product-content": {
+      "type": "main-product-content",
+      "blocks": {
+        "fb1f4d16-df0d-45b5-9465-721dc7a91c53": {
+          "type": "product_description",
+          "settings": {
+            "label": "Product details",
+            "block_width": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "fb1f4d16-df0d-45b5-9465-721dc7a91c53"
+      ],
+      "disabled": true,
+      "settings": {
+        "color": "#000000",
+        "background": "#f9f9f9"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "blocks": {
+        "product_PpRLLQ": {
+          "type": "product",
+          "settings": {
+            "product": "omega-de-ville-424-10-37-20-04-001"
+          }
+        }
+      },
+      "block_order": [
+        "product_PpRLLQ"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "section_padding": "both"
+      }
+    },
+    "1625847223ea0ebb04": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "scale": 2,
+        "page_height": 500,
+        "caption_position": "middle_center",
+        "caption_below": false,
+        "heading": "Image with text overlay",
+        "subheading": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.</p>",
+        "button_text": "Add a button",
+        "button_link": "",
+        "heading_font_size": 30,
+        "subheading_font_size": 15,
+        "text_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "button_color": "#000000",
+        "background": "rgba(0,0,0,0)",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "section_padding": "both"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "Have you seen these",
+        "grid": 4,
+        "limit": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-content",
+    "related-products",
+    "1625847223ea0ebb04",
+    "product-recommendations"
+  ]
+}
