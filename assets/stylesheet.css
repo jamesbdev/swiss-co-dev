@@ -8196,8 +8196,8 @@ ul.meta-content strong {
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-column-gap: 25px;
-  grid-row-gap: 40px;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
 }
 
 @media screen and (max-width: 740px) {
@@ -8258,7 +8258,7 @@ ul.meta-content strong {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,.15);
+  background: rgba(0,0,0,.4);
   content: "";
 }
 .collection__list-text-floating--true .collection__item-details {
