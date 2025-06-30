@@ -1,8 +1,8 @@
 {% comment %}
-  Render a collection grid item.
+  Render a page grid item.
 
   Accepts:
-  - collection: {Object} Liquid Collection object
+  - page: {Object} Liquid Page object
   - grid_item_width: {String}
   - floating_text: {Boolean} Render a floating text or not.
   - block_image: {Boolean} Render a block image.
@@ -13,8 +13,8 @@
 
   Usage:
   {%
-    render 'collection-grid-item',
-    collection: collection,
+    render 'page-grid-item',
+    page: collection,
     grid_item_width: grid_item_width,
     floating_text: floating_text,
     block_image: false,
@@ -24,17 +24,19 @@
     fetchpriority: fetch_priority
   %}
 {% endcomment %}
-{% if collection.empty? %}
+
+
+{% if page.empty? %}
   {% comment %}add default state for collection block in storefront editor{% endcomment %}
-  {% capture collection_title %}{{ 'homepage.onboarding.collection_title' | t }}{% endcapture %}
-  
+  {% capture page_title %}{{ 'homepage.onboarding.collection_title' | t }}{% endcapture %}
+
 {% else %}
-  {% capture collection_title %}{{ collection.title }}{% endcapture %}
+  {% capture page_title %}{{ page.title }}{% endcapture %}
 {% endif %}
 {% capture collection_details %}
   <div class="collection__item-details{% if bold %} is_bold{% endif %}">
-    <a class="inline-block-full" href="{{ collection.url }}" title="{{ collection_title }}">
-      <h3 class="prod-title h4">{{ collection.title }}</h3>
+    <a class="inline-block-full" href="{{ page.url }}" title="{{ page_title }}">
+      <h3 class="prod-title h4">{{ page.title }}</h3>
       {%- if section.settings.collection_count -%}
         <p class="mb0">{{ collection.products_count }} {{ 'collections.general.items' | t }}</p>
       {%- endif -%}
@@ -45,12 +47,12 @@
 <div class="collection__list-item" 
   data-aos="fade"
   data-aos-delay="{{ forloop.index | minus: 1 | modulo: aos_mod | times: 100 }}"
-  data-alpha="{{ collection.title }}">
+  data-alpha="{{ page.title }}">
   <div class="collection__item-image">
     {%- if floating_text -%}
       {{ collection_details }}
     {%- endif -%}
-    <a class="inline-block-full" href="{{ collection.url }}" title="{{ collection_title }}">
+    <a class="inline-block-full" href="{{ page.url }}" title="{{ page_title }}">
     {% if block_image != blank %}
       {%
         render 'basic-responsive-image',

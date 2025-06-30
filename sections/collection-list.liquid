@@ -75,7 +75,10 @@ data-section-type="collection-list">
     <div class="collection-loop collection__list-collections collection__list-text-floating--{{ floating_text }} collection__list-img-shape--{{ image_shape }} collection__list-ratio--{{ section.settings.image_ratio }} collection__list-grid--{{ grid }} {% if is_carousel %}collection__list-carousel flickity__section js-list-carousel{% endif %} span-12 auto"{% if is_carousel %} data-flickity-config='{{ slideshow_config }}'{% endif %} data-block-size="{{ section.blocks.size }}">
       {% for block in section.blocks limit: section.blocks.size %}
         {%- assign collection = collections[block.settings.collection] -%}
-        {% if collection == blank %}
+        {%- assign page = pages[block.settings.page] -%}
+       
+  
+        {% if collection == blank and page == blank %}
           <div class="collection__list-item"
             data-aos="fade"
             data-aos-delay="{{ forloop.index | minus: 1 | modulo: aos_mod | times: 100 }}">
@@ -118,15 +121,31 @@ data-section-type="collection-list">
               endif
             endif
            %}
-          {% render 'collection-grid-item',
-            collection: collection,
+          {%  if block.type == "featured_collection" %}
+          
+            {% render 'collection-grid-item',
+              collection: collection,
+              grid_item_width: grid_item_width,
+              floating_text: floating_text,
+              block_image: block.settings.collection_image,
+              bold: bold,
+              aos_mod: aos_mod
+              loading: loading,
+              fetchpriority: fetch_priority %}
+          
+          {% else if block.type == 'featured_page' %}
+         
+            {% render 'page-grid-item',
+            page: block.settings.page,
             grid_item_width: grid_item_width,
             floating_text: floating_text,
-            block_image: block.settings.collection_image,
+            block_image: block.settings.page_image,
             bold: bold,
             aos_mod: aos_mod
             loading: loading,
             fetchpriority: fetch_priority %}
+
+          {%  endif  %}
         {% endif %}
       {% endfor %}
 
@@ -159,9 +178,12 @@ data-section-type="collection-list">
           }
         {% endif %}
       </style>
+    </div> 
   </div>
 </section>
-<div class="clear"></div>
+<div class="clear">
+
+</div>
 {% schema %}
 {
   "name": "Collection list",
@@ -292,6 +314,21 @@ data-section-type="collection-list">
         "label": "Custom image",
         "info": "Will override collection image"
       }
+    ]
+  }, {
+    "type": "featured_page",
+    "name": "Page",
+    "settings": [
+      {
+        "label": "Page",
+        "id": "page",
+        "type": "page"
+      }, 
+      {
+       "type": "image_picker",
+       "id": "page_image",
+       "label": "Custom image",
+      }, 
     ]
   }],
   "presets": [{
